@@ -13,7 +13,7 @@ async def main():
 
     Services:
         - mcp_math: Provides mathematical computation capabilities. Uses HTTP transport.
-        - weather: Provides weather information and forecasts. Uses WebSocket transport.
+        - weather: Provides weather information and forecasts. Uses 'streamable' transport.
     """
     mcp_math = {
         "command": "python",
