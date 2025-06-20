@@ -21,12 +21,12 @@ async def main():
         "transport": "stdio"
     }
     weather = {
-        "command": "http://localhost:8000/mcp",
+        "url": "http://localhost:8000/mcp",
         "transport": "streamable_http"
     }
 
     # Include mcp_math and weather in a list for MultiServerMCPClient
-    services = {mcp_math, weather}
+    services = {"math":mcp_math, "weather":weather}
     client = MultiServerMCPClient(services)
 
     tools = await client.get_tools()
