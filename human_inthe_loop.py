@@ -26,5 +26,8 @@ class State(TypedDict):
 
 from langchain.chat_models import init_chat_model
 llm=init_chat_model("groq:llama3-8b-8192")
+# llm=init_chat_model("groq:llama3-70b-8192")
+# llm=init_chat_model("groq:qwen-7b-8192")
+# llm=init_chat_model("groq:comppound-beta")
 
 # TODO
