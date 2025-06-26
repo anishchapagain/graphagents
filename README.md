@@ -55,5 +55,5 @@ Both LangGraph and LangChain can be used to build sophisticated AI agents. By co
 
 - [LangGraph Documentation](https://langchain-ai.github.io/langgraph/)
 - [LangGraph Basic Tutorials](https://langchain-ai.github.io/langgraph/tutorials/get-started/1-build-basic-chatbot/)
-- [LangGrpah Human in the Loop](https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop/)
+- [LangGraph Human in the Loop](https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop/)
 - [LangChain Documentation](https://python.langchain.com/)
