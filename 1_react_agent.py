@@ -6,7 +6,8 @@ The agent randomly selects one of the two models for each of the six queries.
 
 import os
 import random
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
+
 from langchain.agents import initialize_agent, AgentType
 from langchain_core.tools import tool
 from langchain_openai import ChatOpenAI
@@ -14,7 +15,7 @@ from langchain.chat_models import init_chat_model
 from langchain_tavily import TavilySearch
 
 # Load environment variables from .env file
-load_dotenv()
+# load_dotenv()
 
 
 def get_openai_llm():
@@ -75,7 +76,7 @@ def main():
             tools=[search_tool],
             llm=llm,
             agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-            verbose=True,
+            verbose=False,
         )
 
         # Invoke the agent with the query
