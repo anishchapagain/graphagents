@@ -35,9 +35,15 @@ def get_openai_llm():
         temperature=0.4,
     )
 
+def get_groq_llm():
+    """Initializes and returns the Groq language model."""
+    # return init_chat_model("groq:llama3-8b-8192")
+    return init_chat_model("groq:llama3-8b-instant")
+
+
 # Initialize the language model.
-# llm = init_chat_model("groq:llama3-8b-8192") # Alternative model
-llm = get_openai_llm()
+llm = get_groq_llm() # Alternative model
+# llm = get_openai_llm()
 
 # --- Tool Initialization ---
 # Initialize Tavily tools for web search, extraction, and crawling.
@@ -122,13 +128,13 @@ inputs = {
     ]
 }
 
-inputs = {
-    "messages": [
-        HumanMessage(
-            content="find top 5 jobs listed for a software engineer in jobsnepal.com"
-        )
-    ]
-}
+# inputs = {
+#     "messages": [
+#         HumanMessage(
+#             content="find top 5 jobs listed for a software engineer in jobsnepal.com"
+#         )
+#     ]
+# }
 
 # Stream the agent's output and print the messages.
 for output in web_agent.stream(inputs, stream_mode="values"):
